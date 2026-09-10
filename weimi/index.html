@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>维密官网-维多利亚的秘密内衣与美妆时尚指南</title>
+    <meta name="description" content="维密官网指南，为您介绍维多利亚的秘密品牌故事、热门内衣系列、PINK少女线、美妆香氛产品与选购建议，帮助您找到最适合自己的维密单品。">
+    <meta name="keywords" content="维密官网,维多利亚的秘密,维密内衣,PINK,维密美妆,维密香氛,内衣选购">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #fff;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+
+        /* ===== Header ===== */
+        .site-header {
+            background: #fff;
+            border-bottom: 1px solid #f0e6e6;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+        .logo a {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 8px;
+            color: #b76e79;
+            text-transform: uppercase;
+            font-family: "Didot", "Bodoni MT", "Times New Roman", serif;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 30px;
+        }
+        .main-nav a {
+            font-size: 14px;
+            color: #333;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .main-nav a:hover {
+            border-color: #b76e79;
+            color: #b76e79;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            font-size: 14px;
+        }
+        .header-actions .icon-search, .header-actions .icon-user, .header-actions .icon-bag {
+            cursor: pointer;
+            color: #333;
+            font-weight: 500;
+        }
+        .header-actions span:hover {
+            color: #b76e79;
+        }
+
+        /* ===== Hero / 首屏 ===== */
+        .hero {
+            background: linear-gradient(135deg, #f9f0f0 0%, #fde9ef 100%);
+            padding: 70px 0 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: #4a2e2e;
+            margin-bottom: 20px;
+            font-family: "Didot", "Bodoni MT", serif;
+        }
+        .hero p {
+            font-size: 16px;
+            color: #6b4f4f;
+            max-width: 620px;
+            margin: 0 auto 30px;
+            letter-spacing: 1px;
+        }
+        .hero-btn {
+            display: inline-block;
+            background: #b76e79;
+            color: #fff;
+            padding: 12px 36px;
+            border-radius: 40px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            transition: background 0.3s;
+        }
+        .hero-btn:hover {
+            background: #9e5963;
+        }
+
+        /* ===== 品牌理念 ===== */
+        .brand-intro {
+            padding: 60px 0;
+            text-align: center;
+            background: #fff;
+        }
+        .brand-intro h2 {
+            font-size: 26px;
+            font-weight: 300;
+            color: #3a2a2a;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+            position: relative;
+        }
+        .brand-intro h2::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: #b76e79;
+            margin: 16px auto 0;
+        }
+        .brand-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 15px;
+        }
+
+        /* ===== 分类 / 产品 ===== */
+        .category-section {
+            padding: 50px 0;
+            background: #faf7f7;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #3a2a2a;
+            margin-bottom: 40px;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .category-card {
+            background: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .category-card .icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .category-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-bottom: 8px;
+        }
+        .category-card p {
+            font-size: 13px;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        /* ===== 热门系列 ===== */
+        .featured-section {
+            padding: 60px 0;
+        }
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .featured-item {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            transition: box-shadow 0.3s;
+        }
+        .featured-item:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        .featured-img {
+            background: #e8d9dc;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7a5a5a;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        .featured-info {
+            padding: 20px 18px 24px;
+        }
+        .featured-info h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .featured-info p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .featured-info .tag {
+            display: inline-block;
+            margin-top: 12px;
+            background: #f5e9ea;
+            color: #b76e79;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        /* ===== PINK 专区 ===== */
+        .pink-banner {
+            background: #ffb6c1;
+            background: linear-gradient(90deg, #ffb3c1 0%, #ffd1dc 100%);
+            padding: 40px 0;
+            text-align: center;
+        }
+        .pink-banner h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #5f2a3a;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        .pink-banner p {
+            color: #6e3a4a;
+            font-size: 15px;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        .pink-btn {
+            background: #fff;
+            color: #b76e79;
+            padding: 10px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        .pink-btn:hover {
+            background: #f8e0e5;
+        }
+
+        /* ===== 美妆香氛 ===== */
+        .beauty-section {
+            padding: 60px 0;
+            background: #f8f2f4;
+        }
+        .beauty-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .beauty-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .beauty-icon {
+            font-size: 36px;
+            background: #f3e2e5;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .beauty-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #3a2a2a;
+        }
+        .beauty-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* ===== 选购指南 ===== */
+        .guide-section {
+            padding: 60px 0;
+        }
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .guide-step {
+            background: #faf7f7;
+            border-radius: 14px;
+            padding: 30px;
+            border-left: 4px solid #b76e79;
+        }
+        .guide-step .step-num {
+            font-size: 28px;
+            font-weight: 700;
+            color: #b76e79;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .guide-step h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: #2d2d2d;
+        }
+        .guide-step p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-section {
+            padding: 60px 0;
+            background: #faf7f7;
+        }
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+        .faq-item h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-bottom: 8px;
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+        .faq-item h3::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 22px;
+            color: #b76e79;
+        }
+        .faq-item p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+            margin-top: 6px;
+            padding-top: 8px;
+            border-top: 1px solid #f0e6e6;
+        }
+
+        /* ===== 订阅 ===== */
+        .newsletter {
+            padding: 50px 0;
+            background: #fff;
+            text-align: center;
+        }
+        .newsletter h2 {
+            font-size: 26px;
+            font-weight: 300;
+            margin-bottom: 14px;
+            color: #3a2a2a;
+            letter-spacing: 2px;
+        }
+        .newsletter p {
+            color: #777;
+            font-size: 15px;
+            margin-bottom: 24px;
+        }
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 18px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            outline: none;
+        }
+        .newsletter-form input:focus {
+            border-color: #b76e79;
+        }
+        .newsletter-form button {
+            background: #b76e79;
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .newsletter-form button:hover {
+            background: #9e5963;
+        }
+
+        /* ===== Footer ===== */
+        .site-footer {
+            background: #1d1d1f;
+            color: #aaa;
+            padding: 50px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        .footer-col ul li a:hover {
+            color: #d4a0a0;
+        }
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 24px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 992px) {
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .beauty-grid {
+                grid-template-columns: 1fr;
+            }
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 14px;
+            }
+            .category-grid,
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+            .beauty-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .newsletter-form {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+            .newsletter-form input {
+                margin-bottom: 10px;
+            }
+            .header-actions span:not(:last-child) {
+                display: none;
+            }
+        }
+        @media (max-width: 480px) {
+            .logo a {
+                font-size: 22px;
+                letter-spacing: 5px;
+            }
+            .hero h1 {
+                font-size: 26px;
+            }
+            .section-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo"><a href="#">VICTORIA'S SECRET</a></div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">新品</a></li>
+                    <li><a href="#">文胸</a></li>
+                    <li><a href="#">内裤</a></li>
+                    <li><a href="#">睡衣</a></li>
+                    <li><a href="#">PINK</a></li>
+                    <li><a href="#">美妆香氛</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <span class="icon-search">搜索</span>
+                <span class="icon-user">登录</span>
+                <span class="icon-bag">购物袋</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>维密官网 · 维多利亚的秘密</h1>
+            <p>探索性感与舒适的完美融合，从经典文胸到PINK少女系列，再到迷人香氛，维密为每一种风格而生</p>
+            <a href="#" class="hero-btn">浏览本季新品</a>
+        </div>
+    </section>
+
+    <!-- 品牌理念 -->
+    <section class="brand-intro">
+        <div class="container">
+            <h2>关于维密</h2>
+            <p>维多利亚的秘密（Victoria's Secret）是全球知名的内衣与美妆品牌，以大胆的设计、精致的蕾丝和标志性的时装秀闻名。维密不仅提供文胸、内裤、睡衣等贴身衣物，更通过PINK系列与香氛美妆产品，传递自信、多元与自我表达的品牌态度。无论是日常穿着还是特殊时刻，维密都致力于让每位女性找到属于自己的魅力。</p>
+        </div>
+    </section>
+
+    <!-- 产品分类 -->
+    <section class="category-section">
+        <div class="container">
+            <h2 class="section-title">产品分类</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <span class="icon">🌸</span>
+                    <h3>文胸系列</h3>
+                    <p>聚拢、无钢圈、前扣式等多样设计，满足不同胸型与穿搭需求。</p>
+                </div>
+                <div class="category-card">
+                    <span class="icon">💫</span>
+                    <h3>内裤专区</h3>
+                    <p>从丁字裤到平角裤，舒适面料与时尚剪裁兼备。</p>
+                </div>
+                <div class="category-card">
+                    <span class="icon">🌙</span>
+                    <h3>睡衣家居</h3>
+                    <p>真丝、棉质睡裙与家居服，打造慵懒优雅的居家时光。</p>
+                </div>
+                <div class="category-card">
+                    <span class="icon">✨</span>
+                    <h3>美妆香氛</h3>
+                    <p>身体乳、香氛喷雾与香水，延续维密标志性的甜美气息。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门系列 -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">热门系列推荐</h2>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <div class="featured-img">Very Sexy 系列</div>
+                    <div class="featured-info">
+                        <h3>Very Sexy</h3>
+                        <p>性感蕾丝与深V设计，展现迷人曲线，是维密最具代表性的系列之一。</p>
+                        <span class="tag">性感 · 聚拢</span>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-img">Body by Victoria</div>
+                    <div class="featured-info">
+                        <h3>Body by Victoria</h3>
+                        <p>主打极致舒适与自然支撑，轻盈面料贴合身体，适合日常全天穿着。</p>
+                        <span class="tag">舒适 · 无感</span>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-img">Dream Angels</div>
+                    <div class="featured-info">
+                        <h3>Dream Angels</h3>
+                        <p>浪漫梦幻的薄纱与刺绣设计，兼顾柔美与支撑力，演绎天使般的优雅。</p>
+                        <span class="tag">浪漫 · 优雅</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PINK 专区 -->
+    <section class="pink-banner">
+        <div class="container">
+            <h2>PINK · 年轻态度</h2>
+            <p>专为年轻女孩打造的PINK系列，以棉质内衣、休闲卫衣和运动单品为主，色彩明快、风格活泼，传递青春活力与自我个性。</p>
+            <a href="#" class="pink-btn">探索 PINK</a>
+        </div>
+    </section>
+
+    <!-- 美妆香氛 -->
+    <section class="beauty-section">
+        <div class="container">
+            <h2 class="section-title">维密美妆与香氛</h2>
+            <div class="beauty-grid">
+                <div class="beauty-card">
+                    <div class="beauty-icon">🧴</div>
+                    <div>
+                        <h3>身体护理</h3>
+                        <p>香氛身体乳、沐浴露与磨砂膏，为肌肤带来丝滑触感，并持久留香。经典Bombshell、Love Spell等香型广受欢迎。</p>
+                    </div>
+                </div>
+                <div class="beauty-card">
+                    <div class="beauty-icon">🌸</div>
+                    <div>
+                        <h3>香氛喷雾</h3>
+                        <p>轻透的香体喷雾适合日常使用，多款香型可供选择，甜美、清新或浓郁，随心切换心情。</p>
+                    </div>
+                </div>
+                <div class="beauty-card">
+                    <div class="beauty-icon">💄</div>
+                    <div>
+                        <h3>彩妆与配件</h3>
+                        <p>维密亦推出眼影盘、唇彩及化妆包等产品，将T台风格带入日常生活。</p>
+                    </div>
+                </div>
+                <div class="beauty-card">
+                    <div class="beauty-icon">🎁</div>
+                    <div>
+                        <h3>香氛礼盒</h3>
+                        <p>精选明星香型组合礼盒，是节日赠礼与自我犒赏的优质选择，包装精致优雅。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 选购指南 -->
+    <section class="guide-section">
+        <div class="container">
+            <h2 class="section-title">内衣选购指南</h2>
+            <div class="guide-grid">
+                <div class="guide-step">
+                    <span class="step-num">01</span>
+                    <h3>了解自己的尺码</h3>
+                    <p>建议测量下胸围与上胸围，根据差值确定罩杯。维密官网提供详细的尺码对照表与测量视频，可参考后再下单。</p>
+                </div>
+                <div class="guide-step">
+                    <span class="step-num">02</span>
+                    <h3>按场景选择杯型</h3>
+                    <p>日常通勤可选无钢圈或T-shirt文胸；约会或特殊场合可选聚拢或深V款；运动时则应选择支撑性强的运动内衣。</p>
+                </div>
+                <div class="guide-step">
+                    <span class="step-num">03</span>
+                    <h3>关注面料与细节</h3>
+                    <p>蕾丝、丝绸或棉质各有特点。敏感肌肤建议优先选择纯棉里衬款式，并注意背扣排数与侧翼宽度带来的稳固感。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>如何确认维密内衣尺码是否合身？</h3>
+                    <p>维密内衣尺码由数字（下胸围英寸）和字母（罩杯）组成。建议用软尺测量下胸围和上胸围，然后对照官网尺码表。不同系列版型略有差异，购买前可查看用户评价或咨询客服。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>维密PINK系列和主线的区别？</h3>
+                    <p>PINK系列定位更年轻，主打棉质基础款、休闲服饰和运动单品，价格相对亲民；主线则侧重蕾丝、刺绣等精致设计，覆盖文胸、内裤、睡衣及美妆全线产品。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>维密香氛喷雾和香水有什么不同？</h3>
+                    <p>香氛喷雾的香精浓度较低，留香时间约2-4小时，适合沐浴后或日常补香；香水浓度更高，留香更持久。维密两者均有多种香型，可以搭配使用。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>如何清洗维密内衣以延长使用寿命？</h3>
+                    <p>建议手洗并使用专用内衣洗衣液，避免机洗和烘干。洗后轻轻挤压水分，平铺晾干，避免阳光直射。蕾丝和真丝材质更需温柔对待。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>维密官网是否支持国际配送？</h3>
+                    <p>维密官网在部分国家和地区提供直邮服务，具体配送范围、运费和税费以结算页面为准。也可通过授权电商平台购买，但需留意渠道是否官方认证。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅 -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>获取维密最新资讯</h2>
+            <p>订阅邮件，第一时间获取新品发布、专属优惠与穿搭灵感</p>
+            <form class="newsletter-form" action="#" method="post">
+                <input type="email" placeholder="请输入您的邮箱地址" required>
+                <button type="submit">订阅</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>客户服务</h4>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">尺码指南</a></li>
+                        <li><a href="#">配送与退货</a></li>
+                        <li><a href="#">订单查询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于维密</h4>
+                    <ul>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">可持续发展</a></li>
+                        <li><a href="#">新闻中心</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门链接</h4>
+                    <ul>
+                        <li><a href="#">Very Sexy 系列</a></li>
+                        <li><a href="#">PINK 专区</a></li>
+                        <li><a href="#">维密香氛</a></li>
+                        <li><a href="#">睡衣精选</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>邮箱：service@victoriassecret.example</li>
+                        <li>客服热线：400-800-8888（工作日 9:00-18:00）</li>
+                        <li>官方社交媒体：@victoriassecret</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Victoria's Secret 维密官网指南 · 本页面为品牌信息展示与知识分享，不构成任何购买承诺。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
