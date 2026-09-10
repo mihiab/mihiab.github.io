@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02kkk最新网站-资源导航与在线使用指南</title>
+    <meta name="description" content="02kkk最新网站入口导航，提供影视、动漫、游戏等综合资源分类指引与使用说明，帮助用户快速找到所需内容。">
+    <meta name="keywords" content="02kkk,02kkk最新网站,02kkk入口,资源导航,影视动漫">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: #f5f6fa;
+            color: #2d3436;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* header */
+        .site-header {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        .logo span {
+            background: #fd79a8;
+            border-radius: 8px;
+            padding: 2px 10px;
+            font-size: 20px;
+        }
+        .logo i {
+            font-style: normal;
+            background: linear-gradient(90deg, #f7971e, #ffd200);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .main-nav {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+        .main-nav a:hover, .main-nav a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+        .search-box {
+            display: flex;
+            background: #fff;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        .search-box input {
+            border: none;
+            outline: none;
+            padding: 8px 16px;
+            width: 200px;
+            font-size: 14px;
+        }
+        .search-box button {
+            background: #fd79a8;
+            border: none;
+            color: #fff;
+            padding: 8px 18px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .search-box button:hover {
+            background: #e84393;
+        }
+        /* hero */
+        .hero {
+            background: linear-gradient(145deg, #1a1a2e, #16213e, #0f3460);
+            padding: 60px 0 50px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(253,121,168,0.3), transparent 70%);
+            border-radius: 50%;
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(90deg, #f7971e, #ffd200, #fd79a8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeUp 0.8s ease;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: rgba(255,255,255,0.8);
+            animation: fadeUp 0.8s 0.1s ease both;
+        }
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            animation: fadeUp 0.8s 0.2s ease both;
+        }
+        .hero-tags a {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 8px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+        }
+        .hero-tags a:hover {
+            background: #fd79a8;
+            border-color: #fd79a8;
+            transform: translateY(-2px);
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* notice */
+        .notice-bar {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 14px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .notice-bar strong {
+            color: #856404;
+        }
+        .notice-bar .notice-icon {
+            font-size: 22px;
+        }
+        /* sections */
+        .section {
+            margin-bottom: 50px;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-left: 16px;
+            border-left: 5px solid #fd79a8;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title small {
+            font-weight: 400;
+            color: #636e72;
+            font-size: 15px;
+        }
+        /* cards grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+        .icon-purple { background: linear-gradient(135deg, #6c5ce7, #a29bfe); }
+        .icon-pink { background: linear-gradient(135deg, #fd79a8, #fab1a0); }
+        .icon-blue { background: linear-gradient(135deg, #0984e3, #74b9ff); }
+        .icon-green { background: linear-gradient(135deg, #00b894, #55efc4); }
+        .icon-orange { background: linear-gradient(135deg, #e17055, #fab1a0); }
+        .icon-navy { background: linear-gradient(135deg, #2d3436, #636e72); }
+        .card h3 {
+            font-size: 19px;
+            margin-bottom: 10px;
+            color: #2d3436;
+        }
+        .card p {
+            color: #636e72;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .card .btn {
+            display: inline-block;
+            margin-top: 14px;
+            color: #0984e3;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .card .btn:hover {
+            color: #fd79a8;
+            padding-left: 6px;
+        }
+        /* two columns */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .feature-list {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .feature-list h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: #2d3436;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .feature-list ul {
+            list-style: none;
+        }
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li::before {
+            content: '✓';
+            color: #00b894;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        /* steps */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .step-item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .step-num {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            margin: 0 auto 12px;
+        }
+        .step-item h4 {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        .step-item p {
+            font-size: 13px;
+            color: #636e72;
+        }
+        /* faq */
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .faq-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .faq-q {
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-q::after {
+            content: '+';
+            font-size: 22px;
+            color: #fd79a8;
+            transition: transform 0.3s;
+        }
+        .faq-item.open .faq-q::after {
+            transform: rotate(45deg);
+        }
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s;
+            color: #636e72;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .faq-item.open .faq-a {
+            max-height: 300px;
+            padding-top: 12px;
+        }
+        /* footer */
+        .site-footer {
+            background: #1a1a2e;
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            margin-bottom: 8px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        .footer-col a:hover {
+            color: #fd79a8;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.4);
+        }
+        /* responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .search-box {
+                width: 100%;
+            }
+            .search-box input {
+                flex: 1;
+                width: auto;
+            }
+            .hero h1 {
+                font-size: 30px;
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            .main-nav {
+                justify-content: center;
+            }
+            .section-title {
+                font-size: 22px;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                padding: 40px 0;
+            }
+            .hero p {
+                font-size: 15px;
+            }
+            .steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <span>02</span><i>kkk</i>
+        </a>
+        <nav class="main-nav">
+            <a href="#" class="active">首页</a>
+            <a href="#">影视</a>
+            <a href="#">动漫</a>
+            <a href="#">游戏</a>
+            <a href="#">软件</a>
+            <a href="#">资讯</a>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索资源...">
+            <button>搜索</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>02kkk最新网站 · 一站式资源导航</h1>
+            <p>聚合影视、动漫、游戏及软件资源，提供清晰的使用指引和最新入口信息，让每一次访问都高效便捷。</p>
+            <div class="hero-tags">
+                <a href="#">🔥 热门推荐</a>
+                <a href="#">🎬 最近更新</a>
+                <a href="#">⭐ 收藏入口</a>
+                <a href="#">💬 用户反馈</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="notice-bar">
+            <span class="notice-icon">📢</span>
+            <div><strong>重要提示：</strong>请通过本页面提供的导航入口访问，谨防仿冒站点。如遇打不开，建议稍后重试或切换网络环境。</div>
+        </div>
+
+        <!-- 资源分类导航 -->
+        <section class="section">
+            <h2 class="section-title">资源分类导航 <small>快速定位所需内容</small></h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon icon-purple">🎬</div>
+                    <h3>影视资源</h3>
+                    <p>涵盖国内外热门电影、剧集、综艺及纪录片，支持多种清晰度选择，更新速度快。</p>
+                    <a href="#" class="btn">进入影视频道 →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon icon-pink">🎨</div>
+                    <h3>动漫番剧</h3>
+                    <p>新番连载与经典老番全集收录，覆盖日漫、国漫及剧场版动画，弹幕互动体验佳。</p>
+                    <a href="#" class="btn">浏览动漫专区 →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon icon-blue">🎮</div>
+                    <h3>游戏中心</h3>
+                    <p>单机大作、手游热游及模拟器资源整合，提供下载指引与配置建议。</p>
+                    <a href="#" class="btn">探索游戏库 →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon icon-green">📦</div>
+                    <h3>软件工具</h3>
+                    <p>常用办公、影音播放、系统优化等软件资源，提供安全下载与安装说明。</p>
+                    <a href="#" class="btn">获取软件工具 →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon icon-orange">📰</div>
+                    <h3>ACG资讯</h3>
+                    <p>动画新作情报、声优动态、漫画连载消息及行业热点，第一时间掌握。</p>
+                    <a href="#" class="btn">阅读新鲜资讯 →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon icon-navy">💎</div>
+                    <h3>会员专享</h3>
+                    <p>为高频用户提供专属高速入口、蓝光原盘资源及个性化推荐服务。</p>
+                    <a href="#" class="btn">了解会员权益 →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新更新 -->
+        <section class="section">
+            <h2 class="section-title">最新更新内容 <small>实时同步站点动态</small></h2>
+            <div class="two-col">
+                <div class="feature-list">
+                    <h3>📌 今日热门</h3>
+                    <ul>
+                        <li>《星海征途》第二季 更新至第08集</li>
+                        <li>《都市奇缘》4K修复版 全集上线</li>
+                        <li>《幻境传说》OVA特别篇 发布</li>
+                        <li>《极速飞车》游戏v2.3.0 下载更新</li>
+                        <li>《夜行者》电影 超清资源已补档</li>
+                    </ul>
+                </div>
+                <div class="feature-list">
+                    <h3>🕒 近期预告</h3>
+                    <ul>
+                        <li>《异世界食堂》第三季 下月开播</li>
+                        <li>年度游戏大赏 提名名单公布</li>
+                        <li>经典动漫《银河英雄传》重制确认</li>
+                        <li>多款工具软件适配Win11新版</li>
+                        <li>站内搜索功能优化升级中</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 使用指南 -->
+        <section class="section">
+            <h2 class="section-title">新用户使用指南 <small>三步快速上手</small></h2>
+            <div class="steps">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <h4>访问入口</h4>
+                    <p>从本页分类导航或搜索框进入感兴趣的内容板块，无需注册即可浏览大部分资源。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <h4>选择资源</h4>
+                    <p>根据封面标题、更新时间和用户评分筛选资源，点击进入详情页查看简介与剧集/版本列表。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <h4>在线观看/下载</h4>
+                    <p>在线播放支持多线路切换；下载资源请按页面指引操作，注意选择安全格式与解压密码。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="section">
+            <h2 class="section-title">常见问题解答 <small>您可能遇到的情况</small></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-q">02kkk最新网站打不开怎么办？</div>
+                    <div class="faq-a">首先检查网络连接是否正常，尝试切换Wi-Fi或移动数据。若仍无法访问，可能是域名解析延迟，建议清理浏览器缓存或更换DNS服务器（如114.114.114.114）。此外，部分网络环境可能限制访问，可尝试使用浏览器无痕模式。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">如何找到最新的影视或动漫更新？</div>
+                    <div class="faq-a">建议关注页面顶部的“最新更新”板块，或通过分类导航进入相应频道，按“更新时间”排序浏览。部分内容发布后需要短暂处理，若未立即看到更新，可稍等几分钟后刷新页面。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">视频播放卡顿或无法加载如何处理？</div>
+                    <div class="faq-a">可尝试切换播放线路（通常提供多个备用源），并确认所用浏览器已开启JavaScript。若使用代理工具，建议调整节点或关闭后重试。同时，降低清晰度选项能有效缓解缓冲问题。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">下载资源需要安装特定软件吗？</div>
+                    <div class="faq-a">大部分资源使用网盘或磁力链接形式提供。网盘文件可直接在线预览或使用官方客户端下载；磁力链接建议使用正规下载工具（如qBittorrent、迅雷等）进行解析下载。请注意文件后缀名与解压密码说明。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">站内资源是否安全？</div>
+                    <div class="faq-a">本站对收录资源进行人工筛选，尽量规避恶意广告与捆绑插件。但仍建议用户在下载后使用安全软件（如360、火绒等）进行扫描。切勿轻信页面中的“破解补丁”或“注册机”等诱导性文件。</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 免责声明 -->
+        <section class="section" style="background:#fff; border-radius:16px; padding:30px; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+            <h2 class="section-title" style="margin-bottom:15px;">使用须知</h2>
+            <p style="font-size:14px; color:#636e72; line-height:1.8;">
+                本站为资源导航与信息分享平台，所有内容均来自互联网公开信息。我们尊重知识产权，如认为本站内容侵犯了您的合法权益，请通过底部联系方式与我们取得联系，我们将在核实后第一时间处理。请用户遵守相关法律法规，仅将资源用于个人学习、研究或欣赏，切勿用于商业用途。
+            </p>
+        </section>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4>站点导航</h4>
+                <a href="#">首页</a>
+                <a href="#">影视专区</a>
+                <a href="#">动漫世界</a>
+                <a href="#">游戏资源</a>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <a href="#">新手入门</a>
+                <a href="#">播放问题</a>
+                <a href="#">下载指南</a>
+                <a href="#">意见反馈</a>
+            </div>
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <a href="#">站点介绍</a>
+                <a href="#">联系方式</a>
+                <a href="#">免责声明</a>
+                <a href="#">友链申请</a>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <p style="font-size:14px;">获取最新更新与活动通知</p>
+                <p style="font-size:14px; margin-top:8px;">建议收藏本页面，方便日常访问</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 02kkk最新网站导航 · 本页面仅供学习交流使用</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // FAQ toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', function() {
+            this.classList.toggle('open');
+        });
+    });
+</script>
+</body>
+</html>
